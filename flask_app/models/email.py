@@ -35,7 +35,7 @@ class Email:
         is_valid = True
         query = "SELECT * FROM emails WHERE email = %(email)s;"
         results = connectToMySQL('email_schema').query_db(query,email)
-        if len(results) == 1:
+        if len(results) >= 1:
             flash("Email address is already taken.")
             is_valid=False
         if not EMAIL_REGEX.match(email['email']): 

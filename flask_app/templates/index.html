@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form action="/process" method="post" class="col-4 bg-danger mt-5 p-5 mx-auto rounded">
+    <form action="/process" method="post" class="col-4 bg-dark mt-5 p-5 mx-auto rounded">
         <div class="mb-2">
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
@@ -18,10 +18,10 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-            <input type="text" class="form-control mb-3 border border-dark" name="email" value="Email Address">
+            <input type="text" class="form-control mb-3 border border-dark" name="email" placeholder="Email Address">
         </div>
         <div class="text-center">
-            <input type="submit" value="Add Email" class="btn btn-dark border border-light text-light">
+            <input type="submit" value="Add Email" class="btn btn-primary text-light">
         </div>
         <p class="text-center mt-3" >
             <a href="/results">View All Emails</a>
